@@ -4,7 +4,7 @@
 (defpackage :org-ckons-json
   (:use :cl))
 
-(in-package #:org-ckons-json)
+(in-package :org-ckons-json)
 
 (defun json-to-object (object-type json-obj)
   (remove-if-not (lambda (x)
