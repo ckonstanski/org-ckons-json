@@ -68,8 +68,8 @@
                      list-of-objects)))
     (let ((listobj (listify list-of-objects)))
       (org-ckons-core::reduce-to-comma-separated-string (mapcar (lambda (alist)
-                                                  (if explicit-encoder-p
-                                                      (json:with-explicit-encoder
-                                                        (json:encode-json-to-string (cons :object alist)))
-                                                      (json:encode-json-alist-to-string alist)))
-                                                listobj)))))
+                                                                  (if explicit-encoder-p
+                                                                      (json:with-explicit-encoder
+                                                                        (json:encode-json-to-string (cons :object alist)))
+                                                                      (json:encode-json-alist-to-string alist)))
+                                                                listobj)))))
